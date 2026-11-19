@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import difflib
+import os
 import shutil
 import subprocess
 import sys
@@ -44,6 +45,8 @@ def cobol_binary(tmp_path_factory) -> Path:
     """Compile payroll.cob fresh for this test session (skip if cobc is missing)."""
     cobc = shutil.which("cobc")
     if cobc is None:
+        if os.environ.get("REQUIRE_COBOL") == "1":
+            pytest.fail("cobc (GnuCOBOL) not installed but REQUIRE_COBOL=1", pytrace=False)
         pytest.skip("cobc (GnuCOBOL) not installed")
     binary = tmp_path_factory.mktemp("cobol") / "payroll"
     subprocess.run([cobc, "-x", "-o", str(binary), str(ROOT / "payroll.cob")], check=True)
