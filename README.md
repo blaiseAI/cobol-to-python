@@ -3,8 +3,9 @@
 Migrating a legacy COBOL batch job to Python, and **proving** the rewrite
 produces the same output, character for character.
 
-> `payroll.cob` is a small sample I wrote to model a legacy batch job. It is not
-> production code from a real system. It is intentionally shaped like one:
+> `payroll.cob` is a small sample program created to model a legacy batch payroll
+> job. The migration approach, business-rule extraction and parity testing are
+> the focus of this project. The program is intentionally shaped like real legacy code:
 > fixed-width records on stdin, implied-decimal numeric fields, `ROUNDED` at
 > specific steps, edited numeric output, and a few silent quirks of the kind a
 > real migration has to preserve.
