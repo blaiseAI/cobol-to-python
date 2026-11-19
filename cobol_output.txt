@@ -1,0 +1,8 @@
+ID    NAME                   HOURS        GROSS         TAX         NET
+00001 Alice Martin          40.00    1,000.00      150.00      850.00
+00002 Bob Tremblay          42.50      875.00      131.25      743.75
+00003 Chen Wei              55.00    2,859.38      614.85    2,244.53
+00004 Dana Okafor           12.33      226.50       33.98      192.52
+00005 Eli Roy                0.00        0.00        0.00        0.00
+00006 Fatima Haddad         40.00    1,260.00      215.00    1,045.00
+TOTALS     6 EMPLOYEES               6,220.88    1,145.08    5,075.80
